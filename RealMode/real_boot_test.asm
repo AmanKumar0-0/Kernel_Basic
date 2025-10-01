@@ -1,13 +1,18 @@
 ORG 0 ; lets change the asm origin to 0
 BITS 16
 
-jmp 0x7c0:start
+_start:
+    jmp short start
+    nop
+times 33 db 0
 
 start:
     ; ds * 16 + 0x7c00 ; If our program start from ox7c0
     ; DS = 0x7c0
     ; 0x7c00 + 0x7c00
+    jmp 0x7c0:step2
 
+step2:
     cli ; clear interruptsmov
 
         mov ax,0x7c0 ; setting up data segment
