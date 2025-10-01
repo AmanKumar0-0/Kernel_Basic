@@ -23,7 +23,7 @@ print_char:
     int 0x10
     ret
 
-message: db 'Hello World',0
+message: db 'Hello World from NoaraOS',0
 
 times 510-($ - $$) db 0
 dw 0xAA55
