@@ -1,0 +1,18 @@
+Remember in real mode only :->
+1. 1Mb of Ram can be accessible.
+2. Based on Original x86 Design.
+        meaning our processor runs in real mode act like the older Intel processors from 1970s like 8086
+3. No security what so ever.
+        meaaning no security to memory,hardware or user program can destroy our os with no way for us to stop them
+4. 16 bits accessible at one time meaning in decinal 0 to 65,535.
+        When in real mode we can only acess the 8 bit and 16 bit registers,
+        operations caan only be done by 16-bit numbers unless we overwrite our instructions.
+5. in real mode memory access is done through the segmentation memory model (1MB of Ram)
+        memory is acccessed by a segment and an offset,
+        programs can be loaded into different areas of memory but run without problems,
+        Multiple Segments available through the use of segment registers
+            segment registors are :-> (in 8086)
+                cs - code segment
+                ds - data segment
+                ss - stack segment
+                es - extra segment
